@@ -78,8 +78,6 @@ namespace KeyManager
             textBox1.Text = "";
         }
 
-        string cardno = "abcde";
-
         /// <summary>
         /// 借出钥匙
         /// </summary>
@@ -88,13 +86,31 @@ namespace KeyManager
         private void button3_Click(object sender, EventArgs e)
         {
             JObject jo = new JObject();
-            jo["cardNo"] = cardno;
-            jo["empowerCardNo"] = "";
+            jo["cardNo"] = txtIc.Text;
+            jo["xPosition"] = txtCol.Text;
+            jo["yPosition"] = txtRow.Text;
             jo["lockerCode"] = txtSgName.Name;
-            jo["XPosition"] = txtCol.Text;
-            jo["YPosition"] = txtRow.Text;
+            jo["operationType"] = 0;
 
-            string str = "1006" + jo.ToString();
+            string str = "1004" + jo.ToString();
+            client.SendAsync(str);
+        }
+
+        /// <summary>
+        /// 成功借出钥匙
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSuccessBor_Click(object sender, EventArgs e)
+        {
+            JObject jo = new JObject();
+            jo["cardNo"] = txtIc.Text;
+            jo["xPosition"] = txtCol.Text;
+            jo["yPosition"] = txtRow.Text;
+            jo["lockerCode"] = txtSgName.Name;
+            jo["operationType"] = 1;
+
+            string str = "1004" + jo.ToString();
             client.SendAsync(str);
         }
 
@@ -106,13 +122,29 @@ namespace KeyManager
         private void button4_Click(object sender, EventArgs e)
         {
             JObject jo = new JObject();
-            jo["cardNo"] = cardno;
+            jo["cardNo"] = txtIc.Text;
             jo["lockerCode"] = txtSgName.Name;
-            jo["XPosition"] = txtCol.Text;
-            jo["YPosition"] = txtRow.Text;
-            jo["keyCode"] = "1234";
+            jo["keyCode"] = txtKeyNo.Text;
+            jo["operationType"] = 0;
 
-            string str = "1008" + jo.ToString();
+            string str = "1005" + jo.ToString();
+            client.SendAsync(str);
+        }
+
+        /// <summary>
+        /// 成功归还钥匙
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSuccessBack_Click(object sender, EventArgs e)
+        {
+            JObject jo = new JObject();
+            jo["cardNo"] = txtIc.Text;
+            jo["lockerCode"] = txtSgName.Name;
+            jo["keyCode"] = txtKeyNo.Text;
+            jo["operationType"] = 1;
+
+            string str = "1005" + jo.ToString();
             client.SendAsync(str);
         }
 
@@ -126,14 +158,71 @@ namespace KeyManager
             txtRe.Text = "";
         }
 
+        /// <summary>
+        /// 上传锁柜信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSendSgName_Click(object sender, EventArgs e)
         {
             JObject jo = new JObject();
-            jo["KeyTableRows"] = txtRowCount.Text;
-            jo["KeyTableColumns"] = txtColCount.Text;
+            jo["keyTableRows"] = txtRowCount.Text;
+            jo["keyTableColumns"] = txtColCount.Text;
             jo["lockerCode"] = txtSgName.Text;
 
-            string str = "1005" + jo.ToString();
+            string str = "1003" + jo.ToString();
+            client.SendAsync(str);
+        }
+
+        /// <summary>
+        /// 上传锁孔列表
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSkList_Click(object sender, EventArgs e)
+        {
+            JObject jo = new JObject();
+            jo["code"] = 200;
+            jo["msg"] = "";
+
+            //list集合的属性
+            JObject item1 = new JObject();
+            item1["id"] = 1;
+            item1["cardNum"] = "ABCDE";
+            item1["state"] = 200;
+            item1["xPosition"] = 1;
+            item1["yPosition"] = 1;
+
+            JObject item2 = new JObject();
+            item2["id"] = 2;
+            item2["cardNum"] = "WDFGT";
+            item2["state"] = 200;
+            item2["xPosition"] = 1;
+            item2["yPosition"] = 2;
+
+            JArray ja = new JArray();
+            ja.Add(item1);
+            ja.Add(item2);
+            jo["list"] = ja;
+
+            string str = "2001" + jo.ToString();
+            client.SendAsync(str);
+        }
+
+        /// <summary>
+        /// 上传用户信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUpLoadUserInfo_Click(object sender, EventArgs e)
+        {
+            JObject jo = new JObject();
+            jo["id"] = 1;
+            jo["cardNo"] = txtIc.Text;
+            jo["fingerprint"] = "FSDFWEGVDSDFSDF";      //这个值暂时写死
+            jo["nickName"] = txtNickName.Text;
+
+            string str = "3004" + jo.ToString();
             client.SendAsync(str);
         }
     }

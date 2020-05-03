@@ -54,12 +54,22 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtColCount = new System.Windows.Forms.TextBox();
             this.txtRowCount = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtIc = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtKeyNo = new System.Windows.Forms.TextBox();
+            this.btnSuccessBor = new System.Windows.Forms.Button();
+            this.btnSuccessBack = new System.Windows.Forms.Button();
+            this.btnSkList = new System.Windows.Forms.Button();
+            this.btnUpLoadUserInfo = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtNickName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 240);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(30, 297);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(350, 143);
@@ -67,8 +77,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(269, 397);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(269, 454);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 41);
             this.button1.TabIndex = 1;
@@ -79,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 210);
+            this.label1.Location = new System.Drawing.Point(27, 267);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 12);
@@ -88,7 +98,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(575, 19);
+            this.label2.Location = new System.Drawing.Point(568, 19);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 27);
@@ -97,19 +107,19 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(152, 141);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(300, 141);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(111, 41);
             this.button3.TabIndex = 1;
-            this.button3.Text = "发送借出命令";
+            this.button3.Text = "发送申请借出命令";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(287, 141);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(582, 141);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(111, 41);
             this.button4.TabIndex = 1;
@@ -119,8 +129,8 @@
             // 
             // txtRe
             // 
-            this.txtRe.Location = new System.Drawing.Point(407, 240);
-            this.txtRe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRe.Location = new System.Drawing.Point(437, 297);
+            this.txtRe.Margin = new System.Windows.Forms.Padding(2);
             this.txtRe.Multiline = true;
             this.txtRe.Name = "txtRe";
             this.txtRe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -130,7 +140,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(405, 210);
+            this.label3.Location = new System.Drawing.Point(435, 267);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
@@ -139,8 +149,8 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(426, 141);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Location = new System.Drawing.Point(723, 198);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(111, 41);
             this.button5.TabIndex = 1;
@@ -150,8 +160,8 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(689, 397);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Location = new System.Drawing.Point(719, 454);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(111, 41);
             this.button6.TabIndex = 1;
@@ -195,7 +205,7 @@
             // 
             // btnConn
             // 
-            this.btnConn.Location = new System.Drawing.Point(452, 17);
+            this.btnConn.Location = new System.Drawing.Point(445, 17);
             this.btnConn.Name = "btnConn";
             this.btnConn.Size = new System.Drawing.Size(75, 23);
             this.btnConn.TabIndex = 5;
@@ -276,7 +286,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(449, 67);
+            this.label9.Location = new System.Drawing.Point(442, 67);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 12);
             this.label9.TabIndex = 3;
@@ -292,25 +302,126 @@
             // 
             // txtRowCount
             // 
-            this.txtRowCount.Location = new System.Drawing.Point(532, 64);
+            this.txtRowCount.Location = new System.Drawing.Point(525, 64);
             this.txtRowCount.Name = "txtRowCount";
             this.txtRowCount.Size = new System.Drawing.Size(100, 21);
             this.txtRowCount.TabIndex = 4;
             this.txtRowCount.Text = "8";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(431, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 12);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "请输入员工卡号";
+            // 
+            // txtIc
+            // 
+            this.txtIc.Location = new System.Drawing.Point(525, 101);
+            this.txtIc.Name = "txtIc";
+            this.txtIc.Size = new System.Drawing.Size(100, 21);
+            this.txtIc.TabIndex = 4;
+            this.txtIc.Text = "ABCDE";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(636, 104);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 12);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "请输入钥匙卡号";
+            // 
+            // txtKeyNo
+            // 
+            this.txtKeyNo.Location = new System.Drawing.Point(731, 101);
+            this.txtKeyNo.Name = "txtKeyNo";
+            this.txtKeyNo.Size = new System.Drawing.Size(100, 21);
+            this.txtKeyNo.TabIndex = 4;
+            this.txtKeyNo.Text = "AD57ERF";
+            // 
+            // btnSuccessBor
+            // 
+            this.btnSuccessBor.Location = new System.Drawing.Point(441, 141);
+            this.btnSuccessBor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSuccessBor.Name = "btnSuccessBor";
+            this.btnSuccessBor.Size = new System.Drawing.Size(111, 41);
+            this.btnSuccessBor.TabIndex = 1;
+            this.btnSuccessBor.Text = "发送成功借出命令";
+            this.btnSuccessBor.UseVisualStyleBackColor = true;
+            this.btnSuccessBor.Click += new System.EventHandler(this.btnSuccessBor_Click);
+            // 
+            // btnSuccessBack
+            // 
+            this.btnSuccessBack.Location = new System.Drawing.Point(723, 141);
+            this.btnSuccessBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSuccessBack.Name = "btnSuccessBack";
+            this.btnSuccessBack.Size = new System.Drawing.Size(111, 41);
+            this.btnSuccessBack.TabIndex = 1;
+            this.btnSuccessBack.Text = "发送成功归还命令";
+            this.btnSuccessBack.UseVisualStyleBackColor = true;
+            this.btnSuccessBack.Click += new System.EventHandler(this.btnSuccessBack_Click);
+            // 
+            // btnSkList
+            // 
+            this.btnSkList.Location = new System.Drawing.Point(159, 141);
+            this.btnSkList.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSkList.Name = "btnSkList";
+            this.btnSkList.Size = new System.Drawing.Size(111, 41);
+            this.btnSkList.TabIndex = 1;
+            this.btnSkList.Text = "上传锁孔列表";
+            this.btnSkList.UseVisualStyleBackColor = true;
+            this.btnSkList.Click += new System.EventHandler(this.btnSkList_Click);
+            // 
+            // btnUpLoadUserInfo
+            // 
+            this.btnUpLoadUserInfo.Location = new System.Drawing.Point(18, 198);
+            this.btnUpLoadUserInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpLoadUserInfo.Name = "btnUpLoadUserInfo";
+            this.btnUpLoadUserInfo.Size = new System.Drawing.Size(111, 41);
+            this.btnUpLoadUserInfo.TabIndex = 1;
+            this.btnUpLoadUserInfo.Text = "上传用户信息";
+            this.btnUpLoadUserInfo.UseVisualStyleBackColor = true;
+            this.btnUpLoadUserInfo.Click += new System.EventHandler(this.btnUpLoadUserInfo_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(636, 67);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 12);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "请输入用户昵称";
+            // 
+            // txtNickName
+            // 
+            this.txtNickName.Location = new System.Drawing.Point(731, 64);
+            this.txtNickName.Name = "txtNickName";
+            this.txtNickName.Size = new System.Drawing.Size(100, 21);
+            this.txtNickName.TabIndex = 4;
+            this.txtNickName.Text = "张三";
+            // 
             // FrmTcpTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 469);
+            this.ClientSize = new System.Drawing.Size(850, 509);
             this.Controls.Add(this.btnSendSgName);
             this.Controls.Add(this.btnConn);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtNickName);
+            this.Controls.Add(this.txtKeyNo);
+            this.Controls.Add(this.txtIc);
             this.Controls.Add(this.txtRowCount);
             this.Controls.Add(this.txtRow);
             this.Controls.Add(this.txtColCount);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.txtCol);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSgName);
@@ -323,13 +434,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnUpLoadUserInfo);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnSkList);
+            this.Controls.Add(this.btnSuccessBack);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnSuccessBor);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtRe);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTcpTest";
             this.Text = "客户端模拟demo";
             this.ResumeLayout(false);
@@ -365,5 +480,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtColCount;
         private System.Windows.Forms.TextBox txtRowCount;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtIc;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtKeyNo;
+        private System.Windows.Forms.Button btnSuccessBor;
+        private System.Windows.Forms.Button btnSuccessBack;
+        private System.Windows.Forms.Button btnSkList;
+        private System.Windows.Forms.Button btnUpLoadUserInfo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtNickName;
     }
 }
